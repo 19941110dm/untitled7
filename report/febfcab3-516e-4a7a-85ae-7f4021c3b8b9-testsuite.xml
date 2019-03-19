@@ -1,0 +1,85 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1552963964735" stop="1552963964905">
+  <name>scripts.test_01</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1552963964735" status="passed" stop="1552963964745">
+      <name>Test01.test001</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="minor"/>
+        <label name="thread" value="1588-MainThread"/>
+        <label name="host" value="DESKTOP-1URGFDQ"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1552963964745" status="passed" stop="1552963964745">
+          <name>新增地址方法被执行</name>
+          <title>新增地址方法被执行</title>
+          <attachments>
+            <attachment source="2a44ae1a-5018-45f1-9b23-9753ec72a1ef-attachment.txt" title="点击新增地址按钮" type="text/plain"/>
+            <attachment source="86f1aa08-4982-415e-b16b-ac310ea1e68c-attachment.txt" title="点击新增输入收件人：" type="text/plain"/>
+            <attachment source="39d42c18-0365-4f75-8807-670d5c989e98-attachment.txt" title="点击新增输入手机号：" type="text/plain"/>
+            <attachment source="74e5cc07-28ac-490c-ac4d-e238d94ebf8d-attachment.txt" title="点击新增输入收货地址：" type="text/plain"/>
+            <attachment source="1f143700-dbe9-46f5-b8d9-5f58d46ff0eb-attachment.txt" title="点击新增输入点击新增：" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1552963964745" status="failed" stop="1552963964905">
+      <name>Test01.test002</name>
+      <failure>
+        <message>AttributeError: png</message>
+        <stack-trace>self = &lt;scripts.test_01.Test01 object at 0x036BB1B0&gt;
+
+    @allure.severity("blocker")
+    @allure.step("更新地址方法被执行")
+    def test002(self):
+        print("断言失败，截图")
+        with open("./image/fail.png",'rb')as f:
+&gt;           allure.attach("失败原因如图：",f.read(),allure.attach_type.png)
+
+scripts\test_01.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cls = &lt;enum 'AttachmentType'&gt;, name = 'png'
+
+    def __getattr__(cls, name):
+        """Return the enum member matching `name`
+    
+            We use __getattr__ instead of descriptors or inserting into the enum
+            class' __dict__ in order to support `name` and `value` being both
+            properties for enum members (which live in the class' __dict__) and
+            enum members themselves.
+    
+            """
+        if _is_dunder(name):
+            raise AttributeError(name)
+        try:
+            return cls._member_map_[name]
+        except KeyError:
+&gt;           raise AttributeError(name) from None
+E           AttributeError: png
+
+c:\py\lib\enum.py:324: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="blocker"/>
+        <label name="thread" value="1588-MainThread"/>
+        <label name="host" value="DESKTOP-1URGFDQ"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1552963964755" status="failed" stop="1552963964755">
+          <name>更新地址方法被执行</name>
+          <title>更新地址方法被执行</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
